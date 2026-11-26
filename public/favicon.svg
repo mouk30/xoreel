@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="릴게임매거진 로고">
+  <rect width="64" height="64" rx="8" fill="#09271F" />
+  <rect x="5" y="5" width="54" height="54" rx="5" fill="none" stroke="#C6A45B" stroke-width="2" />
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#C6A45B" stroke-width="2" stroke-opacity="0.55" />
+  <path
+    d="M23 44V20h11.5c5.2 0 8.5 3.1 8.5 7.7 0 3.7-2.2 6.4-5.7 7.3L44 44h-5.4l-5.8-8.2H27.6V44H23zm4.6-12.1h6.5c2.6 0 4.2-1.4 4.2-3.9 0-2.4-1.6-3.8-4.2-3.8h-6.5v7.7z"
+    fill="#F4F1E8"
+  />
+</svg>

@@ -1,0 +1,8 @@
+{
+  "name": "릴게임 | 핵심 구조 리포트",
+  "description": "릴게임의 회전 드럼·심볼·페이라인 구조와 난수(RNG) 작동 원리부터 8종 게임 백과, 한국 아케이드 역사, 국내 법률·규제 및 이용자 안전정보까지 한눈에 정리한 리포트입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
