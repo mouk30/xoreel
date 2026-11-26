@@ -20,6 +20,7 @@ import { getGameBySlug } from './data/gamesData';
 import { ARTICLES_DATA, GENERAL_FAQS } from './data/editorialData';
 import {
   buildStructuredDataJson,
+  CANONICAL_SITE_ORIGIN,
   getRouteSeoMeta,
   normalizePathname
 } from './data/seoMeta';
@@ -93,7 +94,7 @@ export default function App() {
 
   useEffect(() => {
     const meta = getRouteSeoMeta(currentPath);
-    const origin = window.location.origin;
+    const origin = (import.meta.env.VITE_SITE_URL || CANONICAL_SITE_ORIGIN).replace(/\/$/, '');
     const canonicalUrl = `${origin}${meta.canonicalPath}`;
     const fullImage = `${origin}${meta.ogImage}`;
 

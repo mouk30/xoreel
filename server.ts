@@ -6,6 +6,7 @@ import {
   buildRobotsTxt,
   buildSitemapXml,
   buildStructuredDataJson,
+  CANONICAL_SITE_ORIGIN,
   getRouteSeoMeta,
   normalizePathname
 } from './src/data/seoMeta.ts';
@@ -29,13 +30,10 @@ function escapeAttr(value: string): string {
 }
 
 function parseConfiguredOrigin(): string | null {
-  const candidates = [
-    process.env.SITE_URL,
-    process.env.CANONICAL_URL,
-    process.env.APP_URL
-  ];
+  const candidates = [process.env.SITE_URL, process.env.CANONICAL_URL];
 
   for (const raw of candidates) {
+    if (raw === '') return null;
     const trimmed = raw?.trim();
     if (!trimmed || trimmed === 'MY_APP_URL') continue;
     try {
@@ -47,7 +45,7 @@ function parseConfiguredOrigin(): string | null {
       // Ignore invalid env value and try next candidate
     }
   }
-  return null;
+  return CANONICAL_SITE_ORIGIN;
 }
 
 function isSafeHost(rawHost: string): boolean {

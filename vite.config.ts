@@ -3,13 +3,12 @@ import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 import {defineConfig} from 'vite';
-import {buildRobotsTxt, buildSitemapXml} from './src/data/seoMeta.ts';
+import {buildRobotsTxt, buildSitemapXml, CANONICAL_SITE_ORIGIN} from './src/data/seoMeta.ts';
 
 const DEFAULT_STATIC_ORIGIN =
   process.env.SITE_URL?.trim() ||
-  (process.env.APP_URL?.trim() && process.env.APP_URL.trim() !== 'MY_APP_URL'
-    ? process.env.APP_URL.trim()
-    : 'https://ais-dev-fz47ofgslmwp5iunusx3ba-266850070721.asia-east1.run.app');
+  process.env.CANONICAL_URL?.trim() ||
+  CANONICAL_SITE_ORIGIN;
 
 export default defineConfig(() => {
   return {

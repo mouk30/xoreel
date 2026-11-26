@@ -16,6 +16,8 @@ export interface RouteSeoMeta {
   is404?: boolean;
 }
 
+export const CANONICAL_SITE_ORIGIN = 'https://xoreel.net';
+
 const DEFAULT_OG_IMAGE = '/src/assets/images/hero_reel_archive_1795676703367.jpg';
 
 const GAME_SEO_MAP: Record<string, { name: string; title: string; description: string; image: string }> = {
